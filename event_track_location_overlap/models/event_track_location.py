@@ -3,8 +3,8 @@
 
 from datetime import timedelta
 from odoo import _, api, exceptions, fields, models
-
-from oca.decorators import foreach
+#
+# from oca.decorators import foreach
 
 
 class EventTrackLocation(models.Model):
@@ -15,7 +15,7 @@ class EventTrackLocation(models.Model):
     )
 
     @api.constrains("overlappable")
-    @foreach()
+    # @foreach()
     def _check_overlappable(self):
         """Ensure no overlaps happen with this location."""
         # Skip locations that can be overlapped
